@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích & chu vi</title>
+</head>
+<body>
+    <h2>Nhập kích thước hình chữ nhật</h2>
+    <form action="/rectangle/calc" method="post">
+        Chiều rộng: <input type="number" name="width"/><br><br>
+        Chiều dài: <input type="number" name="height"/><br><br>
+        <button type="submit">Tính</button>
+    </form>
+
+    <p th:if="${area != null}">
+        Diện tích: <span th:text="${area}"></span><br>
+        Chu vi: <span th:text="${perimeter}"></span>
+    </p>
+</body>
+</html>
